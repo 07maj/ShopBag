@@ -16,7 +16,7 @@ const Adminproducts = () => {
         toast.error("Please Login To access the store")
       }
 
-      const response = await fetch("/api/getproducts",
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/getproducts`,
         {
           method: "GET",
           headers: {
@@ -37,7 +37,7 @@ const Adminproducts = () => {
 
   async function handleDelete(id) {
     try {
-      const response = await fetch(`/api/productdelete/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/productdelete/${id}`, {
         method: "DELETE",
       });
       const result = await response.json();

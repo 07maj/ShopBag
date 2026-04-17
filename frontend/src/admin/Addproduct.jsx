@@ -20,7 +20,7 @@ const Addproduct = () => {
         formallData.append("image", image)
 
         try {
-            const response = await fetch('/api/addproduct', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/addproduct`, {
                 method: "POST",
                 body: formallData
             })

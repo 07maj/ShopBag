@@ -19,7 +19,7 @@ const Admindashboard = () => {
         navigate("/adminlogin");
         return;
       }
-      const response = await fetch("/api/getproducts", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/getproducts`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

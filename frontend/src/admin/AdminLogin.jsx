@@ -17,7 +17,7 @@ const AdminLogin = () => {
   async function handleForm(e) {
     e.preventDefault();
     try {
-      const response = await fetch("/api/admin/logindata", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/logindata`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(adminLogin),

@@ -12,7 +12,7 @@ const Products = () => {
 
   async function productsData(selectCategory = "all") {
     try {
-      const response = await fetch(`/api/userproducts?category=${selectCategory}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/userproducts?category=${selectCategory}`);
       const record = await response.json();
       setProducts(record.data);
     } catch (error) {

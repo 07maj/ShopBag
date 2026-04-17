@@ -10,7 +10,7 @@ const Editproduct = () => {
 
   async function updateProduct() {
     try {
-      const response = await fetch(`/api/updateproduct/${id}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/updateproduct/${id}`);
       const result = await response.json();
       if (response.ok) {
         setEdit(result.data);
@@ -37,7 +37,7 @@ const Editproduct = () => {
         Pcat: edit.productCategory,
         Pstatus: edit.productStatus,
       };
-      const response = await fetch(`/api/updateddata/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/updateddata/${id}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)

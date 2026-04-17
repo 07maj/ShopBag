@@ -70,7 +70,7 @@ const Cart = () => {
     const currency = "INR";
     const receipt = `Receipt ${receiptNo}`;
 
-    fetch("/api/cart-order", {
+    fetch(`${import.meta.env.VITE_API_URL}/api/cart-order`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -94,7 +94,7 @@ const Cart = () => {
             let token = localStorage.getItem("token");
             let userId = localStorage.getItem("user");
 
-            fetch("/api/verify", {
+            fetch(`${import.meta.env.VITE_API_URL}/api/verify`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

@@ -8,7 +8,7 @@ const Adminquery = () => {
 
   async function getQuery() {
     try {
-      const response = await fetch("/api/getquery");
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/getquery`);
       const result = await response.json();
       if (response.ok) {
         setQuery(result.data);
@@ -25,7 +25,7 @@ const Adminquery = () => {
 
   async function handleDelete(id) {
     try {
-      const response = await fetch(`/api/deletequery/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/deletequery/${id}`, {
         method: "Delete",
       });
       const result = await response.json();

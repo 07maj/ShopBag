@@ -8,7 +8,7 @@ const initialState = {
 
 export const cartSave = createAsyncThunk("cart/save", async (cartData) => {
   const token = localStorage.getItem("token");
-  const response = await fetch("/api/cart/data", {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/cart/data`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -22,7 +22,7 @@ export const cartSave = createAsyncThunk("cart/save", async (cartData) => {
 
 export const fetchCart = createAsyncThunk("/cart/fetch", async (userId) => {
   const token = localStorage.getItem("token");
-  const response = await fetch(`/api/cart/${userId}`, {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/cart/${userId}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
