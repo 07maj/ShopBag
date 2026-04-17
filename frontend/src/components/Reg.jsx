@@ -32,9 +32,7 @@ const Reg = () => {
       } else {
         toast.error(result.message);
       }
-      console.log(result);
     } catch (error) {
-      console.log(error);
       toast.error(error);
     }
   }

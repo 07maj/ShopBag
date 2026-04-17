@@ -95,10 +95,12 @@ export const cartSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(cartSave.fulfilled, (state, actions) => {});
     builder.addCase(fetchCart.fulfilled, (state, actions) => {
-      const { cartItems, totalPrice, totalQuantity } = actions.payload;
+      if(state.cart.length === 0){
+        const { cartItems, totalPrice, totalQuantity } = actions.payload;
       state.cart = cartItems || [];
       state.TotalPrice = totalPrice || 0;
       state.TotalQuantity = totalQuantity || 0;
+      }
     });
   },
 });
