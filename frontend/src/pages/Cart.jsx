@@ -71,7 +71,7 @@ const Cart = () => {
     const receipt = `Receipt ${receiptNo}`;
 
     fetch(`${import.meta.env.VITE_API_URL}/api/cart-order`, {
-      method: "POST",
+    method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         amount: amount,
