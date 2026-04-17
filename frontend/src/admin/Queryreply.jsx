@@ -13,7 +13,6 @@ const Queryreply = () => {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/userqueryreply/${id}`)
             const result = await response.json()
             if (response.ok) {
-                console.log(result)
                 setqueryData({ to: result.data.userEmail })
             } else {
                 toast.error(result.message)
