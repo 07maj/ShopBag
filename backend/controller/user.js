@@ -39,7 +39,10 @@ const regDataController = async (req, res) => {
 const loginDataController = async (req, res) => {
   try {
     const { loginNumber, loginEmail, loginPass } = req.body;
-    const userCheck = await userCollection.findOne({ userEmail: loginEmail });
+    const userCheck = await userCollection.findOne({ 
+      userEmail: loginEmail,
+  userNumber: loginNumber
+   });
     if (!userCheck) {
       return res.status(400).json({ message: "email not found" });
     }

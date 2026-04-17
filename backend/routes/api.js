@@ -3,7 +3,7 @@ const userController = require("../controller/user");
 const adminController = require("../controller/admin");
 const upload = require("../middleware/multer");
 const { auth } = require("../middleware/auth");
-const { adminAuth } = require("../middleware/auth");
+
 
 apiRoutes.get("/", (req, res) => {
   res.send("you are on backend");

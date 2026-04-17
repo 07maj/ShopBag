@@ -8,7 +8,7 @@ const Hero = () => {
     navigate("/products")
   }
   return (
-    <section className="bg-gradient-to-r from-purple-100 to-white via-white  md:flex items-center justify-between px-6 py-12 max-w-7xl mx-auto rounded-xl mt-28 border border-2">
+    <section className="bg-gradient-to-r from-purple-100 to-white via-white  md:flex items-center justify-between px-6 py-12 max-w-7xl mx-auto rounded-xl mt-28 border-2">
       {/* Hero Content */}
       <div className='md:w-1/2 space-y-4'>
         <h1 className='text-4xl md:text-5xl font-bold text-gray-800'>Fast Delivery 🚀</h1>

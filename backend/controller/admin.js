@@ -45,6 +45,7 @@ const adminLoginDataController = async (req, res) => {
     }
     const matchNumber = await adminCollection.findOne({
       adminContact: adminLoginNumber,
+      adminEmail: adminLoginEmail
     });
     if (!matchNumber) {
       return res.status(400).json({ message: "invalid number" });

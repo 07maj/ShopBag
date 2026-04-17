@@ -8,7 +8,7 @@ const cors = require("cors");
 connectDb();
 
 app.use(express.static("public"));
-app.use(cors({origin: "https://your-frontend.vercel.app"}));
+app.use(cors({origin: "https://shopbag-ir2pylxhc-07majdeveloper-5545s-projects.vercel.app"}));
 app.use(express.json());
 app.use("/api", apiRoutes);
 let port = process.env.PORT || 5000;

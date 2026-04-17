@@ -18,7 +18,6 @@ const Reg = () => {
 
   async function handleForm(e) {
     e.preventDefault();
-    console.log(form);
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/regdata`, {
         method: "POST",
