@@ -16,7 +16,7 @@ const Products = () => {
       const record = await response.json();
       setProducts(record.data);
     } catch (error) {
-      toast.error(error);
+      toast.error(error.message);
     }
   }
   useEffect(() => {

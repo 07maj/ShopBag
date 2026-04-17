@@ -103,7 +103,7 @@ const Cart = () => {
               body: JSON.stringify({
                 razorpay_orderid: response.razorpay_order_id,
                 razorpay_paymentid: response.razorpay_payment_id,
-                razorpay_signature: response.razorpay.razorpay_signature,
+                razorpay_signature: response.razorpay_signature,
                 amount,
                 userId,
               }),
