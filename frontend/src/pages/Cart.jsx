@@ -41,7 +41,7 @@ const Cart = () => {
           userId: userId,
           cartItems: cartData,
           totalPrice: cartAllTotal.TotalPrice,
-          totalQuantity: cartAllTotal.TotalQuantity,
+          totalQuantity: cartAllTotal.TotalQuantity
         }),
       );
     }
@@ -147,7 +147,7 @@ const Cart = () => {
           <ul className="divide-y divide-gray-400" key={index}>
             <li className="flex items-center gap-5 py-4">
               <img
-                src={`/uploads/${item.productImage}`}
+                src={`${import.meta.env.VITE_API_URL}/uploads/${item.productImage}`}
                 alt=""
                 className="h-16 w-16 object-contain"
               />

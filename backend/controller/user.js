@@ -131,7 +131,7 @@ const verifyOrderController = async (req, res) => {
       userId,
     } = req.body;
 
-    const hmac = crypto.createHmac("shopbag123".process.env.KEY_SECRET);
+    const hmac = crypto.createHmac("sha256", process.env.KEY_SECRET);
     hmac.update(razorpay_orderid + "|" + razorpay_paymentid);
     const generate_signature = hmac.digest("hex");
     if (generate_signature === razorpay_signature) {
@@ -147,7 +147,7 @@ const verifyOrderController = async (req, res) => {
 
       res.status(200).json({ success: true, message: "Payment Successfull" });
     } else {
-      res.status(501).json({ success: true, message: "Payment Failed" });
+      res.status(400).json({ success: false, message: "Payment Failed" });
     }
   } catch (error) {
     res.status(500).json({ message: "internal server error" });
