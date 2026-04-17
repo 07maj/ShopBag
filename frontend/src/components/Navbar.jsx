@@ -47,10 +47,10 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-purple-100 to-white via-white fixed top-0 left-0 right-0 z-50 shadow-md ">
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div className="flex items-center justify-between h-16 relative">
+        <div className="flex items-center justify-between h-16 relative cursor-pointer">
           {/* Logo */}
           <div>
-            <img src={logo} alt="" className="w-auto h-28" />
+            <img src={logo} alt="" className="w-auto h-28" onClick={()=>{navigate("/")}}  />
           </div>
           <div className="flex-1 mx-4">
             {/*search input*/}
