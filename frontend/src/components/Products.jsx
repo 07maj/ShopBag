@@ -30,11 +30,11 @@ const Products = () => {
         Products 🔥
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {products.map((item, index) => (
+        {products?.map((item, index) => (
           <div
             className="bg-gray-100 shadow-md rounded-lg p-4 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out text-center" key={item._id}>
             <img
-              src={`/uploads/${item.productImage}`}
+              src={`${import.meta.env.VITE_API_URL}/uploads/${item.productImage}`}
               alt=""
               className="w-full h-28 object-contain rounded-md " />
             <h3 className="text-gray-700 text-2xl mb-1 font-semibold">

@@ -125,7 +125,7 @@ const Cart = () => {
             contact: "9346971119",
           },
         };
-        const paymentObject = window.Razorpay(options);
+        const paymentObject = new window.Razorpay(options);
         paymentObject.open();
       });
   }
@@ -143,7 +143,7 @@ const Cart = () => {
         <h2 className="text-2xl font-bold mb-4 text-purple-500 text-center">
           Your Cart 🛍️
         </h2>
-        {cartData.map((item, index) => (
+        {cartData?.map((item, index) => (
           <ul className="divide-y divide-gray-400" key={index}>
             <li className="flex items-center gap-5 py-4">
               <img
@@ -167,7 +167,7 @@ const Cart = () => {
                 >
                   <FaMinus className="py-1 px-1 text-black rounded bg-purple-300 hover:bg-purple-500 text-2xl font-bold" />
                 </button>
-                <span className="px-1 ">{item.qunatity}</span>
+                <span className="px-1 ">{item.quantity}</span>
                 <button
                   onClick={() => {
                     dispatch(IncrementQuantity(item));
