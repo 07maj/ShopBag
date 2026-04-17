@@ -16,7 +16,7 @@ apiRoutes.post(
   upload.single("image"),
   adminController.productController,
 );
-apiRoutes.get("/getproducts",auth, adminController.allProductsController);
+apiRoutes.get("/getproducts", adminController.allProductsController);
 apiRoutes.delete(
   "/productdelete/:abc",
   adminController.deleteProductController,

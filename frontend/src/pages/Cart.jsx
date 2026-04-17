@@ -35,7 +35,7 @@ const Cart = () => {
     let userId = localStorage.getItem("user");
     let token = localStorage.getItem("token");
 
-    if (userId && token && cartData.length > 0) {
+    if (userId && token) {
       dispatch(
         cartSave({
           userId: userId,

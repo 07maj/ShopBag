@@ -168,7 +168,6 @@ const saveCartDataController = async (req, res) => {
       ((cart.cartItems = cartItems),
         (cart.totalPrice = totalPrice),
         (cart.totalQuantity = totalQuantity));
-      await cart.save();
     } else {
       cart = new cartCollection({
         userId: new mongoose.Types.ObjectId(userId),
